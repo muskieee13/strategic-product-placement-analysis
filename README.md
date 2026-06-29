@@ -29,7 +29,7 @@ Agencies can benefit from strategic product placement analysis to optimize adver
 
 ## 🔗 Live Tableau Dashboard
 
-👉 **[View Interactive Dashboard on Tableau Public](https://public.tableau.com/app/profile/manish.sharma6904/viz/StrategicProductPlacementAnalysis-BYMANISH/Dashboard1)**
+👉 **[View Interactive Dashboard on Tableau Public](https://public.tableau.com/app/profile/viz/StrategicProductPlacementAnalysis/Dashboard1)**
 
 ---
 
