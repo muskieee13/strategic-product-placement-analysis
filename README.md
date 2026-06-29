@@ -214,9 +214,11 @@ Strategic-Product-Placement-Analysis/
 
 | Name | Role |
 |------|------|
-| **Khushi Veerbhan** | Team Lead |
-| **Kunwar Shaurya Pratap Singh** | Member |
-| **Manish Sharma** | Member |
+| Muskan S.K| Team Lead |
+| Pujitha Leela.K | Member |
+| SRI VARSHINI VELAGA | Member |
+| Afrin S.K | Member |
+| Saniya S.K | Member |
 
 ---
 
