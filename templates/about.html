@@ -1,0 +1,203 @@
+{% extends "base.html" %}
+{% block title %}About - Strategic Product Placement Analysis{% endblock %}
+
+{% block content %}
+
+<!-- Hero Banner -->
+<section class="hero-banner text-center">
+    <div class="container">
+        <h1><i class="bi bi-info-circle me-2"></i>About This Project</h1>
+        <p class="lead mb-0">Investigating the relationship between product positioning, sales performance, and consumer behavior</p>
+    </div>
+</section>
+
+<div class="container">
+
+    <!-- Project Objective -->
+    <div class="section-card mb-4">
+        <h5><i class="bi bi-bullseye me-2"></i>Project Objective</h5>
+        <p>
+            This project investigates the relationship between product positioning, sales performance, 
+            and consumer behavior. Using Tableau, we analyze retail sales data to uncover insights into 
+            how different positioning strategies impact sales and consumer preferences. By visualizing 
+            the data, we provide actionable recommendations to optimize product positioning strategies 
+            and drive revenue growth.
+        </p>
+        <p class="mb-0">
+            A retail company wants to understand the impact of product positioning on its sales and 
+            consumer behavior. They have collected data on sales figures, product placement, and consumer 
+            demographics. Through data visualization with Tableau, the company gains actionable insights 
+            to improve product positioning strategies and increase revenue.
+        </p>
+    </div>
+
+    <!-- Business Scenarios -->
+    <h4 class="mb-3"><i class="bi bi-diagram-3 me-2"></i>Business Scenarios</h4>
+    <div class="row g-4 mb-4">
+        <div class="col-md-4">
+            <div class="scenario-card">
+                <div class="scenario-icon"><i class="bi bi-film"></i></div>
+                <h5>Film &amp; Television Production</h5>
+                <p>
+                    Production companies can optimize revenue generation through brand partnerships. 
+                    By employing Tableau visualization, they can analyze the effectiveness of product 
+                    placements in different scenes or episodes, negotiate better deals with brands, 
+                    understand audience engagement with specific products, and make data-driven 
+                    decisions on future placement opportunities.
+                </p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="scenario-card">
+                <div class="scenario-icon"><i class="bi bi-shop"></i></div>
+                <h5>Retail &amp; Consumer Goods</h5>
+                <p>
+                    Retailers and consumer goods companies can enhance their marketing strategies and 
+                    boost sales. Using Tableau, they track product performance across store locations 
+                    and websites, identify high-traffic areas, understand customer preferences, and 
+                    optimize product placement to increase visibility and drive conversions.
+                </p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="scenario-card">
+                <div class="scenario-icon"><i class="bi bi-megaphone"></i></div>
+                <h5>Advertising Agencies</h5>
+                <p>
+                    Advertising agencies can provide valuable insights to their clients and optimize 
+                    advertising campaigns. By utilizing Tableau, they analyze the impact of product 
+                    placements across different media channels (movies, TV shows, online videos), 
+                    demonstrate ROI of placement initiatives, refine targeting strategies, and improve 
+                    campaign effectiveness.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Technical Architecture -->
+    <div class="section-card mb-4">
+        <h5><i class="bi bi-gear me-2"></i>Technical Architecture</h5>
+        <div class="row">
+            <div class="col-md-6">
+                <h6 class="fw-bold mb-3">Project Activities</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="bi bi-check2-square text-success me-2"></i><strong>Data Collection &amp; Extraction</strong> — Collected retail sales dataset with 1,000 transactions</li>
+                    <li class="mb-2"><i class="bi bi-check2-square text-success me-2"></i><strong>Data Preparation</strong> — Cleaned and prepared data for Tableau visualization</li>
+                    <li class="mb-2"><i class="bi bi-check2-square text-success me-2"></i><strong>Data Visualizations</strong> — Created multiple unique visualization types</li>
+                    <li class="mb-2"><i class="bi bi-check2-square text-success me-2"></i><strong>Dashboard</strong> — Responsive interactive Tableau dashboard</li>
+                    <li class="mb-2"><i class="bi bi-check2-square text-success me-2"></i><strong>Story</strong> — Multi-scene Tableau story with narrative flow</li>
+                    <li class="mb-2"><i class="bi bi-check2-square text-success me-2"></i><strong>Performance Testing</strong> — Data filters, calculated fields, and multiple graphs</li>
+                    <li class="mb-2"><i class="bi bi-check2-square text-success me-2"></i><strong>Web Integration</strong> — Flask app with embedded Tableau dashboard &amp; story</li>
+                    <li class="mb-2"><i class="bi bi-check2-square text-success me-2"></i><strong>Documentation</strong> — Comprehensive project documentation</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h6 class="fw-bold mb-3">Tools &amp; Technologies</h6>
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                    <span class="badge bg-primary p-2">Tableau Public</span>
+                    <span class="badge bg-success p-2">Python 3.12</span>
+                    <span class="badge bg-danger p-2">Flask</span>
+                    <span class="badge bg-info p-2">Pandas</span>
+                    <span class="badge bg-warning text-dark p-2">Matplotlib</span>
+                    <span class="badge bg-secondary p-2">Bootstrap 5</span>
+                    <span class="badge bg-dark p-2">Chart.js</span>
+                    <span class="badge bg-primary p-2">HTML / CSS</span>
+                    <span class="badge bg-success p-2">JavaScript</span>
+                </div>
+                <h6 class="fw-bold mb-3">Dataset Overview</h6>
+                <table class="table table-sm table-bordered">
+                    <tbody>
+                        <tr><td class="fw-bold">Records</td><td>1,000 transactions</td></tr>
+                        <tr><td class="fw-bold">Time Period</td><td>January – December 2023</td></tr>
+                        <tr><td class="fw-bold">Categories</td><td>Electronics, Clothing, Beauty</td></tr>
+                        <tr><td class="fw-bold">Features</td><td>Transaction ID, Date, Customer ID, Gender, Age, Product Category, Quantity, Price per Unit, Total Amount</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Structure -->
+    <div class="section-card mb-4">
+        <h5><i class="bi bi-folder me-2"></i>Project Structure</h5>
+        <pre class="bg-dark text-light p-3 rounded"><code>Strategic-Product-Placement-Analysis/
+├── app.py                          # Flask application
+├── data_analysis.py                # Python data analysis script
+├── requirements.txt                # Python dependencies
+├── DataAnalyticsproject.twb        # Tableau workbook
+├── README.md                       # Project documentation
+│
+├── Data/
+│   └── retail_sales_dataset 2.csv  # Source dataset (1,000 records)
+│
+├── Extracts/
+│   └── *.hyper                     # Tableau data extract
+│
+├── static/
+│   └── css/
+│       └── style.css               # Custom CSS styles
+│
+├── templates/
+│   ├── base.html                   # Base template (Jinja2)
+│   ├── index.html                  # Dashboard page
+│   ├── story.html                  # Tableau Story page
+│   └── about.html                  # About / documentation page
+│
+└── Strategic Product Placement Analysis.png  # Dashboard screenshot</code></pre>
+    </div>
+
+    <!-- Team -->
+    <h4 class="mb-3"><i class="bi bi-people me-2"></i>Team Members</h4>
+    <div class="row g-4 mb-4">
+        <div class="col-md-4">
+            <div class="team-card">
+                <div class="team-avatar">K</div>
+                <h6 class="fw-bold">Khushi Veerbhan</h6>
+                <span class="badge bg-primary">Team Lead</span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="team-card">
+                <div class="team-avatar">K</div>
+                <h6 class="fw-bold">Kunwar Shaurya Pratap Singh</h6>
+                <span class="badge bg-secondary">Member</span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="team-card">
+                <div class="team-avatar">M</div>
+                <h6 class="fw-bold">Manish Sharma</h6>
+                <span class="badge bg-secondary">Member</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Key Insights Summary -->
+    <div class="section-card mb-4">
+        <h5><i class="bi bi-lightbulb me-2"></i>Key Insights &amp; Recommendations</h5>
+        <div class="row g-3">
+            <div class="col-md-6">
+                <h6 class="fw-bold text-primary">Insights</h6>
+                <ul>
+                    <li>Electronics generates the highest revenue per transaction due to premium pricing.</li>
+                    <li>Clothing has the highest transaction volume — the most popular product category.</li>
+                    <li>The 26–45 age group is the primary revenue driver across all categories.</li>
+                    <li>Spending patterns across genders are relatively balanced with minor category preferences.</li>
+                    <li>Seasonal trends show peaks during holiday months (Nov–Dec) and mid-year (May–Jun).</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h6 class="fw-bold text-success">Recommendations</h6>
+                <ul>
+                    <li><strong>Premium Placement for Electronics:</strong> Prioritize high-visibility placements for electronics to maximize revenue.</li>
+                    <li><strong>Volume Strategy for Clothing:</strong> Increase shelf space and online presence for clothing items.</li>
+                    <li><strong>Targeted Marketing:</strong> Focus campaigns on the 26–45 demographic for maximum ROI.</li>
+                    <li><strong>Seasonal Campaigns:</strong> Align promotional activities with identified peak sales periods.</li>
+                    <li><strong>Cross-Category Bundling:</strong> Create product bundles combining high-volume and high-value categories.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

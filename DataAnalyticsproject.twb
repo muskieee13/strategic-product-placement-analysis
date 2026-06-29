@@ -1,0 +1,740 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20261.26.0211.1127                               -->
+<workbook original-version='18.1' source-build='2026.1.0 (20261.26.0211.1127)' version='18.1' xml:base='https://localhost:8080' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <repository-location derived-from='http://localhost:9100/workbooks/DataAnalyticsproject_17721267059890?rev=1.2' id='DataAnalyticsproject_17721267059890' path='/workbooks' revision='1.2' />
+  <preferences />
+  <datasources>
+    <datasource caption='retail_sales_dataset 2' inline='true' name='federated.12tf3o21oiokzi1alwkfu0a9f9pg' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='retail_sales_dataset 2' name='textscan.1li10281vzn05716ju6nz0ido1v5'>
+            <connection class='textscan' directory='Data/017khfn0gsg0y115pjbgw098qtk4' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1li10281vzn05716ju6nz0ido1v5' name='retail_sales_dataset 2.csv' table='[retail_sales_dataset 2#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='Transaction ID' ordinal='0' />
+            <column datatype='date' name='Date' ordinal='1' />
+            <column datatype='string' name='Customer ID' ordinal='2' />
+            <column datatype='string' name='Gender' ordinal='3' />
+            <column datatype='integer' name='Age' ordinal='4' />
+            <column datatype='string' name='Product Category' ordinal='5' />
+            <column datatype='integer' name='Quantity' ordinal='6' />
+            <column datatype='integer' name='Price per Unit' ordinal='7' />
+            <column datatype='integer' name='Total Amount' ordinal='8' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[retail_sales_dataset 2.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Transaction ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Transaction ID]</local-name>
+            <parent-name>[retail_sales_dataset 2.csv]</parent-name>
+            <remote-alias>Transaction ID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[retail_sales_dataset 2.csv_E3756F81CF4A4854BBDFC4B5C7771121]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Date]</local-name>
+            <parent-name>[retail_sales_dataset 2.csv]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[retail_sales_dataset 2.csv_E3756F81CF4A4854BBDFC4B5C7771121]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Customer ID</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Customer ID]</local-name>
+            <parent-name>[retail_sales_dataset 2.csv]</parent-name>
+            <remote-alias>Customer ID</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[retail_sales_dataset 2.csv_E3756F81CF4A4854BBDFC4B5C7771121]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Gender]</local-name>
+            <parent-name>[retail_sales_dataset 2.csv]</parent-name>
+            <remote-alias>Gender</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[retail_sales_dataset 2.csv_E3756F81CF4A4854BBDFC4B5C7771121]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Age</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Age]</local-name>
+            <parent-name>[retail_sales_dataset 2.csv]</parent-name>
+            <remote-alias>Age</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[retail_sales_dataset 2.csv_E3756F81CF4A4854BBDFC4B5C7771121]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Product Category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Product Category]</local-name>
+            <parent-name>[retail_sales_dataset 2.csv]</parent-name>
+            <remote-alias>Product Category</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[retail_sales_dataset 2.csv_E3756F81CF4A4854BBDFC4B5C7771121]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Quantity</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Quantity]</local-name>
+            <parent-name>[retail_sales_dataset 2.csv]</parent-name>
+            <remote-alias>Quantity</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[retail_sales_dataset 2.csv_E3756F81CF4A4854BBDFC4B5C7771121]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Price per Unit</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Price per Unit]</local-name>
+            <parent-name>[retail_sales_dataset 2.csv]</parent-name>
+            <remote-alias>Price per Unit</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[retail_sales_dataset 2.csv_E3756F81CF4A4854BBDFC4B5C7771121]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Total Amount</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Total Amount]</local-name>
+            <parent-name>[retail_sales_dataset 2.csv]</parent-name>
+            <remote-alias>Total Amount</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[retail_sales_dataset 2.csv_E3756F81CF4A4854BBDFC4B5C7771121]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Placement Category' datatype='string' name='[Calculation_0001142591287296]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [Total Amount] &gt;= 500 THEN &quot;Prime Placement&quot;&#10;ELSEIF [Total Amount] &gt;= 200 THEN &quot;Medium Placement&quot;&#10;ELSE &quot;Low Visibility Placement&quot;&#10;END' />
+      </column>
+      <column datatype='integer' name='[Transaction ID]' role='dimension' type='ordinal' />
+      <column caption='retail_sales_dataset 2.csv' datatype='table' name='[__tableau_internal_object_id__].[retail_sales_dataset 2.csv_E3756F81CF4A4854BBDFC4B5C7771121]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='retail_sales_dataset 2.csv_E3756F81CF4A4854BBDFC4B5C7771121' units='records'>
+        <connection authentication='auth-none' author-locale='en_US' class='hyper' dbname='Data/Extracts/federated_12tf3o21oiokzi1alwkfu0.hyper' default-settings='yes' schema='Extract' tablename='Extract' update-time='02/26/2026 05:05:06 PM'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh>
+            <refresh-event add-from-file-path='retail_sales_dataset 2' increment-value='%null%' refresh-type='create' rows-inserted='1000' timestamp-start='2026-02-26 17:05:06.239' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Transaction ID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Transaction ID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Transaction ID</remote-alias>
+              <ordinal>0</ordinal>
+              <family>retail_sales_dataset 2.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1000</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[retail_sales_dataset 2.csv_E3756F81CF4A4854BBDFC4B5C7771121]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Date</remote-alias>
+              <ordinal>1</ordinal>
+              <family>retail_sales_dataset 2.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>345</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[retail_sales_dataset 2.csv_E3756F81CF4A4854BBDFC4B5C7771121]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Customer ID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Customer ID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Customer ID</remote-alias>
+              <ordinal>2</ordinal>
+              <family>retail_sales_dataset 2.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1000</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[retail_sales_dataset 2.csv_E3756F81CF4A4854BBDFC4B5C7771121]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Gender</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Gender]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Gender</remote-alias>
+              <ordinal>3</ordinal>
+              <family>retail_sales_dataset 2.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[retail_sales_dataset 2.csv_E3756F81CF4A4854BBDFC4B5C7771121]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Age</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Age]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Age</remote-alias>
+              <ordinal>4</ordinal>
+              <family>retail_sales_dataset 2.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>47</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[retail_sales_dataset 2.csv_E3756F81CF4A4854BBDFC4B5C7771121]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Product Category</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Product Category]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Product Category</remote-alias>
+              <ordinal>5</ordinal>
+              <family>retail_sales_dataset 2.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[retail_sales_dataset 2.csv_E3756F81CF4A4854BBDFC4B5C7771121]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Quantity</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Quantity]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Quantity</remote-alias>
+              <ordinal>6</ordinal>
+              <family>retail_sales_dataset 2.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[retail_sales_dataset 2.csv_E3756F81CF4A4854BBDFC4B5C7771121]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Price per Unit</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Price per Unit]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Price per Unit</remote-alias>
+              <ordinal>7</ordinal>
+              <family>retail_sales_dataset 2.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[retail_sales_dataset 2.csv_E3756F81CF4A4854BBDFC4B5C7771121]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Total Amount</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Total Amount]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Total Amount</remote-alias>
+              <ordinal>8</ordinal>
+              <family>retail_sales_dataset 2.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>18</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[retail_sales_dataset 2.csv_E3756F81CF4A4854BBDFC4B5C7771121]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' rowDisplayCount='100' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;USA&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='Transaction ID' />
+        <field-sort-custom-order field='Date' />
+        <field-sort-custom-order field='Customer ID' />
+        <field-sort-custom-order field='Gender' />
+        <field-sort-custom-order field='Calculation_0001142591287296' />
+        <field-sort-custom-order field='Age' />
+        <field-sort-custom-order field='Product Category' />
+        <field-sort-custom-order field='Quantity' />
+        <field-sort-custom-order field='Price per Unit' />
+        <field-sort-custom-order field='Total Amount' />
+        <field-sort-custom-order field='Geometry (generated)' />
+        <field-sort-custom-order field='Latitude (generated)' />
+        <field-sort-custom-order field='Longitude (generated)' />
+        <field-sort-custom-order field=':Measure Names' />
+        <field-sort-custom-order field='Multiple Values' />
+      </field-sort-info>
+      <object-graph>
+        <objects>
+          <object caption='retail_sales_dataset 2.csv' id='retail_sales_dataset 2.csv_E3756F81CF4A4854BBDFC4B5C7771121'>
+            <properties context=''>
+              <relation connection='textscan.1li10281vzn05716ju6nz0ido1v5' name='retail_sales_dataset 2.csv' table='[retail_sales_dataset 2#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='Transaction ID' ordinal='0' />
+                  <column datatype='date' name='Date' ordinal='1' />
+                  <column datatype='string' name='Customer ID' ordinal='2' />
+                  <column datatype='string' name='Gender' ordinal='3' />
+                  <column datatype='integer' name='Age' ordinal='4' />
+                  <column datatype='string' name='Product Category' ordinal='5' />
+                  <column datatype='integer' name='Quantity' ordinal='6' />
+                  <column datatype='integer' name='Price per Unit' ordinal='7' />
+                  <column datatype='integer' name='Total Amount' ordinal='8' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Filter 1 (generated)' name='[Action1_E6CC611555BE4538B65AB67B743E0C24]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Strategic Product Placement Analysis' type='sheet' worksheet='Placement vs Sales' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Strategic Product Placement Analysis' />
+      </command>
+    </action>
+    <action caption='Filter 2 (generated)' name='[Action2_D8A726A0583B41BF882095E31C223E0E]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Strategic Product Placement Analysis' type='sheet' worksheet='Product Category vs Placement' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Strategic Product Placement Analysis' />
+      </command>
+    </action>
+    <action caption='Filter 3 (generated)' name='[Action3_E2057D8449C04383827D67CC0845ACDA]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Strategic Product Placement Analysis' type='sheet' worksheet='Sales Trend Over Time' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Strategic Product Placement Analysis' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Placement vs Sales'>
+      <repository-location derived-from='http://localhost:9100/workbooks/DataAnalyticsproject_17721267059890/PlacementvsSales?rev=' id='127368294' path='/workbooks/DataAnalyticsproject_17721267059890' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='retail_sales_dataset 2' name='federated.12tf3o21oiokzi1alwkfu0a9f9pg' />
+          </datasources>
+          <datasource-dependencies datasource='federated.12tf3o21oiokzi1alwkfu0a9f9pg'>
+            <column caption='Placement Category' datatype='string' name='[Calculation_0001142591287296]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Total Amount] &gt;= 500 THEN &quot;Prime Placement&quot;&#10;ELSEIF [Total Amount] &gt;= 200 THEN &quot;Medium Placement&quot;&#10;ELSE &quot;Low Visibility Placement&quot;&#10;END' />
+            </column>
+            <column datatype='integer' name='[Total Amount]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_0001142591287296]' derivation='None' name='[none:Calculation_0001142591287296:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Total Amount]' derivation='Sum' name='[sum:Total Amount:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.12tf3o21oiokzi1alwkfu0a9f9pg].[sum:Total Amount:qk]</rows>
+        <cols>[federated.12tf3o21oiokzi1alwkfu0a9f9pg].[none:Calculation_0001142591287296:nk]</cols>
+      </table>
+      <simple-id uuid='{6032F3D9-75A7-4BFF-86D0-0FCBBF4E78DB}' />
+    </worksheet>
+    <worksheet name='Product Category vs Placement'>
+      <repository-location derived-from='http://localhost:9100/workbooks/DataAnalyticsproject_17721267059890/ProductCategoryvsPlacement?rev=' id='127368296' path='/workbooks/DataAnalyticsproject_17721267059890' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='retail_sales_dataset 2' name='federated.12tf3o21oiokzi1alwkfu0a9f9pg' />
+          </datasources>
+          <datasource-dependencies datasource='federated.12tf3o21oiokzi1alwkfu0a9f9pg'>
+            <column caption='Placement Category' datatype='string' name='[Calculation_0001142591287296]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Total Amount] &gt;= 500 THEN &quot;Prime Placement&quot;&#10;ELSEIF [Total Amount] &gt;= 200 THEN &quot;Medium Placement&quot;&#10;ELSE &quot;Low Visibility Placement&quot;&#10;END' />
+            </column>
+            <column datatype='string' name='[Product Category]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Total Amount]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_0001142591287296]' derivation='None' name='[none:Calculation_0001142591287296:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Product Category]' derivation='None' name='[none:Product Category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Total Amount]' derivation='Sum' name='[sum:Total Amount:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.12tf3o21oiokzi1alwkfu0a9f9pg].[none:Product Category:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.12tf3o21oiokzi1alwkfu0a9f9pg].[sum:Total Amount:qk]' shelf='columns' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.12tf3o21oiokzi1alwkfu0a9f9pg].[none:Calculation_0001142591287296:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.12tf3o21oiokzi1alwkfu0a9f9pg].[sum:Total Amount:qk]</rows>
+        <cols>[federated.12tf3o21oiokzi1alwkfu0a9f9pg].[none:Product Category:nk]</cols>
+      </table>
+      <simple-id uuid='{611E4EA4-CE5C-4786-9FB3-B4192F7B5841}' />
+    </worksheet>
+    <worksheet name='Sales Trend Over Time'>
+      <repository-location derived-from='http://localhost:9100/workbooks/DataAnalyticsproject_17721267059890/SalesTrendOverTime?rev=' id='127368295' path='/workbooks/DataAnalyticsproject_17721267059890' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='retail_sales_dataset 2' name='federated.12tf3o21oiokzi1alwkfu0a9f9pg' />
+          </datasources>
+          <datasource-dependencies datasource='federated.12tf3o21oiokzi1alwkfu0a9f9pg'>
+            <column caption='Placement Category' datatype='string' name='[Calculation_0001142591287296]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [Total Amount] &gt;= 500 THEN &quot;Prime Placement&quot;&#10;ELSEIF [Total Amount] &gt;= 200 THEN &quot;Medium Placement&quot;&#10;ELSE &quot;Low Visibility Placement&quot;&#10;END' />
+            </column>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[Total Amount]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_0001142591287296]' derivation='None' name='[none:Calculation_0001142591287296:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Total Amount]' derivation='Sum' name='[sum:Total Amount:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Date]' derivation='Year' name='[yr:Date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.12tf3o21oiokzi1alwkfu0a9f9pg].[none:Calculation_0001142591287296:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.12tf3o21oiokzi1alwkfu0a9f9pg].[sum:Total Amount:qk]</rows>
+        <cols>[federated.12tf3o21oiokzi1alwkfu0a9f9pg].[yr:Date:ok]</cols>
+      </table>
+      <simple-id uuid='{6F986445-F6AF-40C9-BA53-006E21326441}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Strategic Product Placement Analysis'>
+      <repository-location derived-from='http://localhost:9100/workbooks/DataAnalyticsproject_17721267059890/StrategicProductPlacementAnalysis?rev=' id='127368297' path='/workbooks/DataAnalyticsproject_17721267059890' revision='' />
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='8' param='horz' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='98000' id='6' type-v2='layout-basic' w='82400' x='800' y='1000'>
+              <zone h='38875' id='3' name='Placement vs Sales' w='82400' x='800' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='34625' id='5' name='Sales Trend Over Time' w='82400' x='800' y='39875'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='24500' id='10' name='Product Category vs Placement' w='82400' x='800' y='74500'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='98000' id='7' is-fixed='true' param='vert' type-v2='layout-flow' w='16000' x='83200' y='1000'>
+              <zone h='10875' id='9' name='Sales Trend Over Time' pane-specification-id='0' param='[federated.12tf3o21oiokzi1alwkfu0a9f9pg].[none:Calculation_0001142591287296:nk]' type-v2='color' w='16000' x='83200' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='850' minheight='850' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='18' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='17' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+                <zone fixed-size='280' h='38875' id='3' is-fixed='true' name='Placement vs Sales' w='82400' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='269' h='34625' id='5' is-fixed='true' name='Sales Trend Over Time' w='82400' x='800' y='39875'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='10875' id='9' name='Sales Trend Over Time' pane-specification-id='0' param='[federated.12tf3o21oiokzi1alwkfu0a9f9pg].[none:Calculation_0001142591287296:nk]' type-v2='color' w='16000' x='83200' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='188' h='24500' id='10' is-fixed='true' name='Product Category vs Placement' w='82400' x='800' y='74500'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{B69A441B-0FD1-409A-8D41-A1F7FE338096}' />
+    </dashboard>
+  </dashboards>
+  <windows>
+    <window class='worksheet' name='Placement vs Sales'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.12tf3o21oiokzi1alwkfu0a9f9pg].[none:Calculation_0001142591287296:nk]</field>
+            <field>[federated.12tf3o21oiokzi1alwkfu0a9f9pg].[none:Product Category:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{84679CE8-948D-4036-8D82-881EAAC65FDF}' />
+    </window>
+    <window class='worksheet' name='Sales Trend Over Time'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.12tf3o21oiokzi1alwkfu0a9f9pg].[none:Calculation_0001142591287296:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.12tf3o21oiokzi1alwkfu0a9f9pg].[none:Calculation_0001142591287296:nk]</field>
+            <field>[federated.12tf3o21oiokzi1alwkfu0a9f9pg].[yr:Date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{ECB83E38-A664-4542-8F61-7E5F5110FD9D}' />
+    </window>
+    <window class='worksheet' name='Product Category vs Placement'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='31'>
+            <card type='columns' />
+          </strip>
+          <strip size='31'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.12tf3o21oiokzi1alwkfu0a9f9pg].[none:Calculation_0001142591287296:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.12tf3o21oiokzi1alwkfu0a9f9pg].[none:Calculation_0001142591287296:nk]</field>
+            <field>[federated.12tf3o21oiokzi1alwkfu0a9f9pg].[none:Product Category:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{EE80BDAD-E644-4F51-8A53-1B09F6FBD806}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Strategic Product Placement Analysis'>
+      <viewpoints>
+        <viewpoint name='Placement vs Sales'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Product Category vs Placement'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sales Trend Over Time'>
+          <zoom type='entire-view' />
+          <highlight>
+            <color-one-way>
+              <field>[federated.12tf3o21oiokzi1alwkfu0a9f9pg].[none:Calculation_0001142591287296:nk]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{74D83500-4329-402B-AC6D-643A53FF031B}' />
+    </window>
+  </windows>
+</workbook>

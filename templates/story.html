@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+{% block title %}Story - Strategic Product Placement Analysis{% endblock %}
+
+{% block content %}
+
+<!-- Hero Banner -->
+<section class="hero-banner text-center">
+    <div class="container">
+        <h1><i class="bi bi-book me-2"></i>Data Story</h1>
+        <p class="lead mb-0">A visual narrative exploring product placement strategies and their impact on sales</p>
+    </div>
+</section>
+
+<div class="container">
+
+    <!-- Story Description -->
+    <div class="section-card mb-4">
+        <h5><i class="bi bi-info-circle me-2"></i>About This Story</h5>
+        <p>
+            This Tableau Story walks through key findings from the retail sales data analysis.
+            Each scene of the story focuses on a different aspect of product placement strategy:
+        </p>
+        <div class="row g-3 mt-2">
+            <div class="col-md-4">
+                <div class="d-flex align-items-start">
+                    <i class="bi bi-1-circle-fill text-primary me-2 fs-4"></i>
+                    <div>
+                        <strong>Scene 1: Sales Overview</strong>
+                        <p class="text-muted mb-0 small">Overall sales performance and key metrics across all product categories.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="d-flex align-items-start">
+                    <i class="bi bi-2-circle-fill text-primary me-2 fs-4"></i>
+                    <div>
+                        <strong>Scene 2: Category Analysis</strong>
+                        <p class="text-muted mb-0 small">Deep dive into how Electronics, Clothing, and Beauty categories perform.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="d-flex align-items-start">
+                    <i class="bi bi-3-circle-fill text-primary me-2 fs-4"></i>
+                    <div>
+                        <strong>Scene 3: Consumer Insights</strong>
+                        <p class="text-muted mb-0 small">Demographic patterns — how age and gender influence purchasing behavior.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row g-3 mt-1">
+            <div class="col-md-4">
+                <div class="d-flex align-items-start">
+                    <i class="bi bi-4-circle-fill text-primary me-2 fs-4"></i>
+                    <div>
+                        <strong>Scene 4: Trend Analysis</strong>
+                        <p class="text-muted mb-0 small">Monthly and seasonal trends that reveal optimal placement timing.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="d-flex align-items-start">
+                    <i class="bi bi-5-circle-fill text-primary me-2 fs-4"></i>
+                    <div>
+                        <strong>Scene 5: Pricing Strategy</strong>
+                        <p class="text-muted mb-0 small">Price point analysis and its correlation with sales volume.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="d-flex align-items-start">
+                    <i class="bi bi-6-circle-fill text-primary me-2 fs-4"></i>
+                    <div>
+                        <strong>Scene 6: Recommendations</strong>
+                        <p class="text-muted mb-0 small">Data-driven recommendations for optimizing product placement strategies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tableau Story Embed -->
+    <div class="tableau-container">
+        <h5 class="mb-3"><i class="bi bi-play-circle me-2"></i>Interactive Tableau Story</h5>
+        <div class="ratio" style="--bs-aspect-ratio: 70%;">
+            <iframe
+                src="https://public.tableau.com/views/DataAnalyticsproject_17721267059890/Story1?:embed=y&:display_count=yes&:showVizHome=no"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <!-- Key Takeaways -->
+    <div class="section-card mb-4">
+        <h5><i class="bi bi-lightbulb me-2"></i>Key Takeaways</h5>
+        <div class="row g-3">
+            <div class="col-md-6">
+                <div class="d-flex align-items-start">
+                    <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
+                    <p class="mb-2"><strong>Electronics leads in revenue</strong> — despite fewer transactions, high price points drive the most revenue.</p>
+                </div>
+                <div class="d-flex align-items-start">
+                    <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
+                    <p class="mb-2"><strong>Clothing dominates transaction volume</strong> — the most purchased category across all demographics.</p>
+                </div>
+                <div class="d-flex align-items-start">
+                    <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
+                    <p class="mb-2"><strong>Seasonal trends matter</strong> — sales peaks align with holiday and festive seasons.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="d-flex align-items-start">
+                    <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
+                    <p class="mb-2"><strong>Age 26–45 drives spending</strong> — this demographic contributes the highest share of total revenue.</p>
+                </div>
+                <div class="d-flex align-items-start">
+                    <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
+                    <p class="mb-2"><strong>Gender-neutral strategies work best</strong> — male and female spending patterns are relatively balanced.</p>
+                </div>
+                <div class="d-flex align-items-start">
+                    <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
+                    <p class="mb-2"><strong>Strategic pricing boosts revenue</strong> — premium-priced items in the right category maximize returns.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

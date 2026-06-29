@@ -1,0 +1,246 @@
+{% extends "base.html" %}
+{% block title %}Dashboard - Strategic Product Placement Analysis{% endblock %}
+
+{% block content %}
+
+<!-- Hero Banner -->
+<section class="hero-banner text-center">
+    <div class="container">
+        <h1><i class="bi bi-graph-up-arrow me-2"></i>Strategic Product Placement Analysis</h1>
+        <p class="lead mb-0">Interactive dashboard analyzing retail sales data to uncover product positioning insights</p>
+    </div>
+</section>
+
+<div class="container">
+
+    <!-- KPI Cards Row -->
+    <div class="row g-3 mb-4">
+        <div class="col-lg-2 col-md-4 col-6">
+            <div class="kpi-card">
+                <div class="kpi-icon"><i class="bi bi-currency-dollar"></i></div>
+                <div class="kpi-value">{{ kpis.total_revenue }}</div>
+                <div class="kpi-label">Total Revenue</div>
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-6">
+            <div class="kpi-card green">
+                <div class="kpi-icon"><i class="bi bi-receipt"></i></div>
+                <div class="kpi-value">{{ kpis.total_transactions }}</div>
+                <div class="kpi-label">Transactions</div>
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-6">
+            <div class="kpi-card orange">
+                <div class="kpi-icon"><i class="bi bi-cart-check"></i></div>
+                <div class="kpi-value">{{ kpis.avg_order_value }}</div>
+                <div class="kpi-label">Avg Order Value</div>
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-6">
+            <div class="kpi-card red">
+                <div class="kpi-icon"><i class="bi bi-people"></i></div>
+                <div class="kpi-value">{{ kpis.unique_customers }}</div>
+                <div class="kpi-label">Unique Customers</div>
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-6">
+            <div class="kpi-card green">
+                <div class="kpi-icon"><i class="bi bi-trophy"></i></div>
+                <div class="kpi-value">{{ kpis.top_category }}</div>
+                <div class="kpi-label">Top Category</div>
+            </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-6">
+            <div class="kpi-card orange">
+                <div class="kpi-icon"><i class="bi bi-box-seam"></i></div>
+                <div class="kpi-value">{{ kpis.avg_quantity }}</div>
+                <div class="kpi-label">Avg Qty / Order</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tableau Dashboard Embed -->
+    <div class="tableau-container mb-4">
+        <h5 class="mb-3"><i class="bi bi-easel me-2"></i>Interactive Tableau Dashboard</h5>
+        <div class="ratio" style="--bs-aspect-ratio: 62%;">
+            <iframe
+                src="https://public.tableau.com/views/DataAnalyticsproject_17721267059890/StrategicProductPlacementAnalysis?:embed=y&:display_count=yes&:showVizHome=no"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <!-- Charts Row -->
+    <div class="row g-4 mb-4">
+        <!-- Monthly Sales Trend -->
+        <div class="col-lg-8">
+            <div class="section-card">
+                <h5><i class="bi bi-graph-up me-2"></i>Monthly Sales Trend (2023)</h5>
+                <div class="chart-container" style="height:350px;">
+                    <canvas id="monthlyChart"></canvas>
+                </div>
+            </div>
+        </div>
+        <!-- Category Distribution -->
+        <div class="col-lg-4">
+            <div class="section-card">
+                <h5><i class="bi bi-pie-chart me-2"></i>Sales by Category</h5>
+                <div class="chart-container" style="height:350px;">
+                    <canvas id="categoryPieChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Second Charts Row -->
+    <div class="row g-4 mb-4">
+        <!-- Gender Split -->
+        <div class="col-lg-4">
+            <div class="section-card">
+                <h5><i class="bi bi-gender-ambiguous me-2"></i>Sales by Gender</h5>
+                <div class="chart-container">
+                    <canvas id="genderChart"></canvas>
+                </div>
+            </div>
+        </div>
+        <!-- Age Group -->
+        <div class="col-lg-4">
+            <div class="section-card">
+                <h5><i class="bi bi-person-lines-fill me-2"></i>Sales by Age Group</h5>
+                <div class="chart-container">
+                    <canvas id="ageChart"></canvas>
+                </div>
+            </div>
+        </div>
+        <!-- Category Table -->
+        <div class="col-lg-4">
+            <div class="section-card">
+                <h5><i class="bi bi-table me-2"></i>Category Performance</h5>
+                <table class="table table-styled table-hover mb-0">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Revenue</th>
+                            <th>Orders</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for cat in category_stats %}
+                        <tr>
+                            <td>
+                                <span class="badge-category badge-{{ cat['Product Category']|lower }}">
+                                    {{ cat["Product Category"] }}
+                                </span>
+                            </td>
+                            <td>${{ "{:,.0f}".format(cat.total_sales) }}</td>
+                            <td>{{ cat.transaction_count }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // ── Monthly Sales Trend ─────────────────────────────────────
+    const monthlyData = {{ monthly_trend | tojson }};
+    new Chart(document.getElementById('monthlyChart'), {
+        type: 'line',
+        data: {
+            labels: monthlyData.map(d => d.Month),
+            datasets: [{
+                label: 'Total Sales ($)',
+                data: monthlyData.map(d => d['Total Amount']),
+                borderColor: '#3498db',
+                backgroundColor: 'rgba(52,152,219,0.1)',
+                borderWidth: 2.5,
+                fill: true,
+                tension: 0.3,
+                pointBackgroundColor: '#3498db',
+                pointRadius: 5
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: {
+                y: { beginAtZero: true, ticks: { callback: v => '$' + v.toLocaleString() } }
+            }
+        }
+    });
+
+    // ── Category Pie Chart ──────────────────────────────────────
+    const catData = {{ category_stats | tojson }};
+    new Chart(document.getElementById('categoryPieChart'), {
+        type: 'doughnut',
+        data: {
+            labels: catData.map(d => d['Product Category']),
+            datasets: [{
+                data: catData.map(d => d.total_sales),
+                backgroundColor: ['#3498db', '#27ae60', '#e74c3c'],
+                borderWidth: 2,
+                borderColor: '#fff'
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { position: 'bottom' }
+            }
+        }
+    });
+
+    // ── Gender Bar Chart ────────────────────────────────────────
+    const genderData = {{ gender_stats | tojson }};
+    new Chart(document.getElementById('genderChart'), {
+        type: 'bar',
+        data: {
+            labels: genderData.map(d => d.Gender),
+            datasets: [{
+                label: 'Total Sales ($)',
+                data: genderData.map(d => d.total_sales),
+                backgroundColor: ['#3498db', '#e74c3c'],
+                borderRadius: 8
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: {
+                y: { beginAtZero: true, ticks: { callback: v => '$' + v.toLocaleString() } }
+            }
+        }
+    });
+
+    // ── Age Group Chart ─────────────────────────────────────────
+    const ageData = {{ age_groups | tojson }};
+    new Chart(document.getElementById('ageChart'), {
+        type: 'bar',
+        data: {
+            labels: ageData.map(d => d['Age Group']),
+            datasets: [{
+                label: 'Total Sales ($)',
+                data: ageData.map(d => d.total_sales),
+                backgroundColor: ['#1abc9c', '#3498db', '#9b59b6', '#f39c12', '#e74c3c'],
+                borderRadius: 8
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: {
+                y: { beginAtZero: true, ticks: { callback: v => '$' + v.toLocaleString() } }
+            }
+        }
+    });
+</script>
+{% endblock %}

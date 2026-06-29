@@ -1,0 +1,256 @@
+/* =====================================================
+   Strategic Product Placement Analysis – Custom Styles
+   ===================================================== */
+
+:root {
+    --primary: #2c3e50;
+    --accent: #3498db;
+    --accent-dark: #2980b9;
+    --success: #27ae60;
+    --warning: #f39c12;
+    --danger: #e74c3c;
+    --bg-light: #f8f9fa;
+    --card-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-light);
+    color: #333;
+}
+
+/* ── Navbar ─────────────────────────────────────────── */
+.navbar {
+    background: linear-gradient(135deg, var(--primary), #1a252f) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    padding: 0.8rem 1rem;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--accent) !important;
+}
+
+/* ── Hero Banner ────────────────────────────────────── */
+.hero-banner {
+    background: linear-gradient(135deg, var(--primary), var(--accent-dark));
+    color: #fff;
+    padding: 2.5rem 0;
+    margin-bottom: 2rem;
+}
+
+.hero-banner h1 {
+    font-weight: 700;
+    font-size: 2.2rem;
+}
+
+.hero-banner p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* ── KPI Cards ──────────────────────────────────────── */
+.kpi-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-left: 4px solid var(--accent);
+    height: 100%;
+}
+
+.kpi-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.kpi-card .kpi-icon {
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+.kpi-card .kpi-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.kpi-card .kpi-label {
+    font-size: 0.85rem;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Color variants */
+.kpi-card.green  { border-left-color: var(--success); }
+.kpi-card.green .kpi-icon  { color: var(--success); }
+.kpi-card.orange { border-left-color: var(--warning); }
+.kpi-card.orange .kpi-icon { color: var(--warning); }
+.kpi-card.red    { border-left-color: var(--danger);  }
+.kpi-card.red .kpi-icon    { color: var(--danger);  }
+
+/* ── Section Card ───────────────────────────────────── */
+.section-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.section-card h5 {
+    font-weight: 600;
+    color: var(--primary);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* ── Tableau Embed ──────────────────────────────────── */
+.tableau-container {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    padding: 1rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.tableau-container iframe {
+    border: none;
+    border-radius: 8px;
+}
+
+/* ── Tables ─────────────────────────────────────────── */
+.table-styled {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table-styled thead th {
+    background: var(--primary);
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    padding: 0.75rem 1rem;
+}
+
+.table-styled tbody td {
+    padding: 0.65rem 1rem;
+    vertical-align: middle;
+}
+
+.table-styled tbody tr:hover {
+    background-color: rgba(52, 152, 219, 0.05);
+}
+
+/* ── Badge pills ────────────────────────────────────── */
+.badge-category {
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.badge-electronics { background: #3498db22; color: #2980b9; }
+.badge-clothing    { background: #27ae6022; color: #27ae60; }
+.badge-beauty      { background: #e74c3c22; color: #e74c3c; }
+
+/* ── Chart containers ───────────────────────────────── */
+.chart-container {
+    position: relative;
+    height: 300px;
+}
+
+/* ── Footer ─────────────────────────────────────────── */
+.footer {
+    background: var(--primary);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+}
+
+.footer a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+/* ── About page cards ───────────────────────────────── */
+.scenario-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    padding: 1.5rem;
+    height: 100%;
+    transition: transform 0.2s;
+    border-top: 4px solid var(--accent);
+}
+
+.scenario-card:hover {
+    transform: translateY(-3px);
+}
+
+.scenario-card h5 {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.scenario-icon {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+/* ── Team Section ───────────────────────────────────── */
+.team-card {
+    text-align: center;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.2s;
+}
+
+.team-card:hover {
+    transform: translateY(-3px);
+}
+
+.team-avatar {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--accent), var(--primary));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 700;
+}
+
+/* ── Responsive ─────────────────────────────────────── */
+@media (max-width: 768px) {
+    .hero-banner h1 {
+        font-size: 1.6rem;
+    }
+    .kpi-card .kpi-value {
+        font-size: 1.4rem;
+    }
+    .navbar-brand {
+        font-size: 1rem;
+    }
+}
