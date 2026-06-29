@@ -2,7 +2,7 @@
 
 > Investigating the relationship between product positioning, sales performance, and consumer behavior using Tableau and Flask.
 
-![Dashboard Screenshot](Strategic%20Product%20Placement%20Analysis.png)
+![Dashboard Screenshot](Screenshot 2026-06-29 122505.png)
 
 ---
 
